@@ -44,7 +44,8 @@ class MineField
 		cellAt(row, col).select();
 		show();
 	}
-	
+
+	/* returns whether or not the cell was previously marked */
 	bool mark(int x, int y)
 	{
 		bool wasMarked = cellAt(x, y).isMarked();
@@ -60,11 +61,11 @@ class MineField
 		
 		if(c.isMarked())
 		{
-		
+			/* nothing to do here... */
 		}
 		else if(c.isVoid())
 		{
-			v = c.reveal();
+			c.reveal();
 			foreach(cell; getSurrounding(x, y))
 			{
 				if(!cell.isRevealed())
@@ -158,7 +159,7 @@ class MineField
 		}
 		if(x > mines.length - 1 || y > mines.length - 1)
 		{
-			return new Cell(-1, x, y);
+			return new Cell(-1, x, y); /* ditto */
 		}
 		return mines[x][y];
 	}
@@ -180,7 +181,7 @@ class MineField
 	
 }
 
-class Cell
+private class Cell
 {
 	int value, x, y;
 	bool selected = false;
@@ -195,11 +196,6 @@ class Cell
 		y = pos_y;
 	}
 	
-	void getPos(out int pos_x, out int pos_y)
-	{
-		pos_x = x;
-		pos_y = y;
-	}
 	
 	this(int v, int pos_x, int pos_y)
 	{
@@ -207,6 +203,12 @@ class Cell
 		setValue(v);
 	}
 	
+	void getPos(out int pos_x, out int pos_y)
+	{
+		pos_x = x;
+		pos_y = y;
+	}
+
 	void setValue(int v)
 	{
 		value = v;
