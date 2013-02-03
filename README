@@ -1,11 +1,10 @@
 DMineur
 
-Minesweeper clone made in the D programming language. Hence D-mineur. Get it ? Get it ? :D
-Okay...
+A naive attempt at making a Minesweeper clone (how naive you say ? It uses system("CLS")) made in the D programming language. Hence the name : D-mineur. Get it ? Get it ? :D
 
 Type DMineur.exe --help for a brief howto.
-To build you will need the DMD 2 compiler :
-```
-dmd -O -release DMineur.d logic.d
-```
+To build from the source you will need the DMD 2 compiler, which can be downloaded from dlang.org :
+
+	dmd -O -release DMineur.d logic.d
+
 Enjoy !
