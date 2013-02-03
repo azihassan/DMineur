@@ -64,7 +64,7 @@ int main(string[] args)
 						mines.select(x, y);
 						if(!noConfirm)
 						{
-							write("\rPress Y to confirm or re-enter the coordonnates : ");
+							write("\rPress Y to confirm or re-enter the coordinates : ");
 							entry = chomp(readln());
 						}
 					}
@@ -148,7 +148,7 @@ void usage(string executable)
 	writeln("A few guidelines");
 	writeln("`````````````````");
 	writeln("When the game prompts you to select a cell");
-	writeln("enter the coordinets in the following format : (row column <M>).");
+	writeln("enter the coordinates in the following format : (row column <M>).");
 	writeln("Marking helps keeping track of how many bombs are left.");
 	writeln("A marked cell cannot be revealed unless unmarked (this prevents deadly accidents).");
 }
