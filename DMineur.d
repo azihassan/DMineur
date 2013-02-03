@@ -8,7 +8,7 @@ int main(string[] args)
 	auto mines = new MineField(8, 8);
 	string entry;
 	int x, y, v, bombs = 8;
-	bool parseStatus = false, noConfirm = false;
+	bool noConfirm = false;
 	
 	if(args.length > 1)
 	{
@@ -111,6 +111,7 @@ int main(string[] args)
 	return 0;
 }
 
+/* the validation here is lousy */
 bool parseEntry(string entry, out int x, out int y, out bool mark)
 {
 	string[] coordinates = std.array.split(entry, " ");
