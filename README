@@ -1,0 +1,11 @@
+DMineur
+
+Minesweeper clone made in the D programming language. Hence D-mineur. Get it ? Get it ? :D
+Okay...
+
+Type DMineur.exe --help for a brief howto.
+To build you will need the DMD 2 compiler :
+```
+dmd -O -release DMineur.d logic.d
+```
+Enjoy !
