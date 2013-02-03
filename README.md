@@ -10,3 +10,5 @@ To build from the source you will need the DMD 2 compiler, which can be download
 `dmd -O -release DMineur.d logic.d`
 
 Enjoy !
+
+[Virus scan](https://www.virustotal.com/file/913ff2fe342b944f8129846fea4fa49032547dc614196548c985d4f7604a7152/analysis/1359921777/)
